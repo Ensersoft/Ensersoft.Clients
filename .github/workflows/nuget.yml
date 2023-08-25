@@ -1,0 +1,26 @@
+name: Publish NuGet
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - version.props
+            - .github/workflows/nuget.yml
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v3
+              with:
+                  dotnet-version: 7.x
+
+            - name: Publish NuGet
+              uses: ensersoft/action-nuget-publish@v1.0.0
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients/Ensersoft.Clients.csproj

@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="11.5.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="7.0.0" />
+    </ItemGroup>
+      <ItemGroup>
+        <ProjectReference Include="..\Ensersoft.Clients.Common\Ensersoft.Clients.Common.csproj" />
+      </ItemGroup>
+</Project>

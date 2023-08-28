@@ -5,30 +5,72 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D0C209CF-2DF1-4C98-B135-264FD5D2D59C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients", "src\Ensersoft.Clients\Ensersoft.Clients.csproj", "{ED2EB259-17A5-4C5C-8CCC-09F2E261FE8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Predictor", "src\Ensersoft.Clients.Predictor\Ensersoft.Clients.Predictor.csproj", "{B7BAD708-F441-4A75-937D-E232850EFFAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Abstractions", "src\Ensersoft.Clients.Abstractions\Ensersoft.Clients.Abstractions.csproj", "{225B1302-C529-468B-BA94-FD1A3AC9A582}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Common", "src\Ensersoft.Clients.Common\Ensersoft.Clients.Common.csproj", "{F01F41B9-E71E-4CDB-B6E7-DC2652CBB9D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Predictions", "src\Ensersoft.Clients.Predictions\Ensersoft.Clients.Predictions.csproj", "{BDD03E90-16F3-4190-A844-7EBB80CA6E4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Notifications", "src\Ensersoft.Clients.Notifications\Ensersoft.Clients.Notifications.csproj", "{19FF8FF7-7F53-48F4-BFA5-0FC43D61BE66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Injections", "src\Ensersoft.Clients.Injections\Ensersoft.Clients.Injections.csproj", "{BCFFFD77-AD60-49BC-9855-FD9731C6B335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Notifications.Abstractions", "src\Ensersoft.Clients.Notifications.Abstractions\Ensersoft.Clients.Notifications.Abstractions.csproj", "{2206C495-4989-4EAE-A175-5D50D4852712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Predictions.Abstractions", "src\Ensersoft.Clients.Predictions.Abstractions\Ensersoft.Clients.Predictions.Abstractions.csproj", "{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Predictor.Abstractions", "src\Ensersoft.Clients.Predictor.Abstractions\Ensersoft.Clients.Predictor.Abstractions.csproj", "{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7BAD708-F441-4A75-937D-E232850EFFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BAD708-F441-4A75-937D-E232850EFFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BAD708-F441-4A75-937D-E232850EFFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BAD708-F441-4A75-937D-E232850EFFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01F41B9-E71E-4CDB-B6E7-DC2652CBB9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01F41B9-E71E-4CDB-B6E7-DC2652CBB9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01F41B9-E71E-4CDB-B6E7-DC2652CBB9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01F41B9-E71E-4CDB-B6E7-DC2652CBB9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD03E90-16F3-4190-A844-7EBB80CA6E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD03E90-16F3-4190-A844-7EBB80CA6E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD03E90-16F3-4190-A844-7EBB80CA6E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD03E90-16F3-4190-A844-7EBB80CA6E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FF8FF7-7F53-48F4-BFA5-0FC43D61BE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FF8FF7-7F53-48F4-BFA5-0FC43D61BE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FF8FF7-7F53-48F4-BFA5-0FC43D61BE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FF8FF7-7F53-48F4-BFA5-0FC43D61BE66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFFFD77-AD60-49BC-9855-FD9731C6B335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFFFD77-AD60-49BC-9855-FD9731C6B335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFFFD77-AD60-49BC-9855-FD9731C6B335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFFFD77-AD60-49BC-9855-FD9731C6B335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2206C495-4989-4EAE-A175-5D50D4852712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2206C495-4989-4EAE-A175-5D50D4852712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2206C495-4989-4EAE-A175-5D50D4852712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2206C495-4989-4EAE-A175-5D50D4852712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED2EB259-17A5-4C5C-8CCC-09F2E261FE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED2EB259-17A5-4C5C-8CCC-09F2E261FE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED2EB259-17A5-4C5C-8CCC-09F2E261FE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED2EB259-17A5-4C5C-8CCC-09F2E261FE8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{225B1302-C529-468B-BA94-FD1A3AC9A582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{225B1302-C529-468B-BA94-FD1A3AC9A582}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{225B1302-C529-468B-BA94-FD1A3AC9A582}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{225B1302-C529-468B-BA94-FD1A3AC9A582}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{ED2EB259-17A5-4C5C-8CCC-09F2E261FE8A} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
-		{225B1302-C529-468B-BA94-FD1A3AC9A582} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{B7BAD708-F441-4A75-937D-E232850EFFAD} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{F01F41B9-E71E-4CDB-B6E7-DC2652CBB9D7} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{BDD03E90-16F3-4190-A844-7EBB80CA6E4E} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{19FF8FF7-7F53-48F4-BFA5-0FC43D61BE66} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{BCFFFD77-AD60-49BC-9855-FD9731C6B335} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{2206C495-4989-4EAE-A175-5D50D4852712} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
 	EndGlobalSection
 EndGlobal

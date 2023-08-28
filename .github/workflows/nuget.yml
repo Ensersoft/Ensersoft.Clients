@@ -20,7 +20,7 @@ jobs:
                   dotnet-version: 7.x
 
             - name: Publish NuGet
-              uses: ensersoft/action-nuget-publish@v1.0.1
+              uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
                   project: src/Ensersoft.Clients/Ensersoft.Clients.csproj

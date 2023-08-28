@@ -19,8 +19,26 @@ jobs:
               with:
                   dotnet-version: 7.x
 
-            - name: Publish NuGet
+            - name: Publish NuGet Predictor
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients/Ensersoft.Clients.csproj
+                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Predictor.csproj
+
+            - name: Publish NuGet Predictions
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Predictions/Ensersoft.Clients.Predictions.csproj
+
+            - name: Publish NuGet Predictions
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Notifications/Ensersoft.Clients.Notifications.csproj
+
+            - name: Publish NuGet Injections
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Injections/Ensersoft.Clients.Injections.csproj

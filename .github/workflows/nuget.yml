@@ -36,9 +36,3 @@ jobs:
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
                   project: src/Ensersoft.Clients.Notifications/Ensersoft.Clients.Notifications.csproj
-
-            - name: Publish NuGet Injections
-              uses: ensersoft/action-nuget-publish@v1.0.2
-              with:
-                  nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.Injections/Ensersoft.Clients.Injections.csproj

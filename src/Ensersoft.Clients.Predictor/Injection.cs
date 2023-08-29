@@ -15,7 +15,7 @@ using Ensersoft.Clients.Common;
 
 namespace Ensersoft.Clients.Predictor;
 
-public static class PredictorInjection
+public static class Injection
 {
     private static readonly IReadOnlyCollection<Func<HttpRequestMessage, bool>> DefaultAllowRetryFilters =
         new List<Func<HttpRequestMessage, bool>>()

@@ -8,4 +8,5 @@
       <ItemGroup>
         <ProjectReference Include="..\Ensersoft.Clients.Common\Ensersoft.Clients.Common.csproj" />
       </ItemGroup>
+    <Import Project="../../version.props" />
 </Project>

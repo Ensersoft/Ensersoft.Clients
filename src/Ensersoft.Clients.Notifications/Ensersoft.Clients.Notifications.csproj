@@ -10,4 +10,5 @@
     <ProjectReference Include="..\Ensersoft.Clients.Notifications.Abstractions\Ensersoft.Clients.Notifications.Abstractions.csproj" />
     <ProjectReference Include="..\Ensersoft.Clients.Common\Ensersoft.Clients.Common.csproj" />
   </ItemGroup>
+  <Import Project="../../version.props" />
 </Project>

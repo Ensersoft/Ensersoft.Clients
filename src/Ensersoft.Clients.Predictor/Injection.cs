@@ -13,9 +13,9 @@ using Polly.Extensions.Http;
 using Polly.Timeout;
 using Ensersoft.Clients.Common;
 
-namespace Ensersoft.Clients.Injections;
+namespace Ensersoft.Clients.Predictor;
 
-public static class Injection
+public static class PredictorInjection
 {
     private static readonly IReadOnlyCollection<Func<HttpRequestMessage, bool>> DefaultAllowRetryFilters =
         new List<Func<HttpRequestMessage, bool>>()

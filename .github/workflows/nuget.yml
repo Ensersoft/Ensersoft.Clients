@@ -23,25 +23,25 @@ jobs:
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Common.csproj
+                  project: src/Ensersoft.Clients.Common/Ensersoft.Clients.Common.csproj
 
             - name: Publish NuGet Predictor Abstractions
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Predictor.Abstractions.csproj
+                  project: src/Ensersoft.Clients.Predictor.Abstractions/Ensersoft.Clients.Predictor.Abstractions.csproj
 
             - name: Publish NuGet Predictions Abstractions
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Predictions.Abstractions.csproj
+                  project: src/Ensersoft.Clients.Predictions.Abstractions/Ensersoft.Clients.Predictions.Abstractions.csproj
 
             - name: Publish NuGet Notifications Abstractions
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Notifications.Abstractions.csproj
+                  project: src/Ensersoft.Clients.Notifications.Abstractions/Ensersoft.Clients.Notifications.Abstractions.csproj
 
             - name: Publish NuGet Predictor
               uses: ensersoft/action-nuget-publish@v1.0.2

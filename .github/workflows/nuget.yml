@@ -19,6 +19,30 @@ jobs:
               with:
                   dotnet-version: 7.x
 
+            - name: Publish NuGet Clients Common
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Common.csproj
+
+            - name: Publish NuGet Predictor Abstractions
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Predictor.Abstractions.csproj
+
+            - name: Publish NuGet Predictions Abstractions
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Predictions.Abstractions.csproj
+
+            - name: Publish NuGet Notifications Abstractions
+              uses: ensersoft/action-nuget-publish@v1.0.2
+              with:
+                  nuget-key: ${{ secrets.NUGET_API_KEY }}
+                  project: src/Ensersoft.Clients.Predictor/Ensersoft.Clients.Notifications.Abstractions.csproj
+
             - name: Publish NuGet Predictor
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
@@ -31,7 +55,7 @@ jobs:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
                   project: src/Ensersoft.Clients.Predictions/Ensersoft.Clients.Predictions.csproj
 
-            - name: Publish NuGet Predictions
+            - name: Publish NuGet Notifications
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}

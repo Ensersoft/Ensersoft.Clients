@@ -8,14 +8,13 @@ namespace Ensersoft.Clients.Common.Attributes;
 [AttributeUsage(validOn: AttributeTargets.Class | AttributeTargets.Method)]
 public sealed class ApiKeyAttribute : Attribute, IAsyncActionFilter
 {
-    private const string APIKEY_HEADER = "ApiKey";
-
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
         var appSettings = context.HttpContext.RequestServices.GetRequiredService<ApiKeyOptions>();
         var apiKey = appSettings.ApiKey;
+        var apiKeyHeader = appSettings.ApiKeyHeader;
 
-        if (!context.HttpContext.Request.Headers.TryGetValue(APIKEY_HEADER, out var keyStr)
+        if (!context.HttpContext.Request.Headers.TryGetValue(apiKeyHeader, out var keyStr)
             || keyStr.Count == 0 || !apiKey.Equals(keyStr[0], StringComparison.Ordinal))
         {
             throw new InvalidApiKeyHeaderException();

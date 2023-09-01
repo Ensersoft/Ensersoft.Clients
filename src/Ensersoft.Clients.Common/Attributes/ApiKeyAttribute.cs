@@ -12,7 +12,7 @@ public sealed class ApiKeyAttribute : Attribute, IAsyncActionFilter
     {
         var appSettings = context.HttpContext.RequestServices.GetRequiredService<ApiKeyOptions>();
         var apiKey = appSettings.ApiKey;
-        var apiKeyHeader = appSettings.ApiKeyHeader;
+        var apiKeyHeader = ApiKeyOptions.ApiKeyHeader;
 
         if (!context.HttpContext.Request.Headers.TryGetValue(apiKeyHeader, out var keyStr)
             || keyStr.Count == 0 || !apiKey.Equals(keyStr[0], StringComparison.Ordinal))

@@ -2,9 +2,9 @@ namespace Ensersoft.Clients.Predictions.Abstractions.Models;
 
 public record SetupModelRequest : BaseRegionRangeRequest
 {
-    public SetupModelRequest(string region, int fromYear, int fromMonth, int toYear, int toMonth)
+    public SetupModelRequest(int regionKey, int fromYear, int fromMonth, int toYear, int toMonth)
     {
-        Region = region;
+        RegionKey = regionKey;
         FromYear = fromYear;
         FromMonth = fromMonth;
         ToYear = toYear;

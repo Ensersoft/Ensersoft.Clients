@@ -2,12 +2,12 @@ namespace Ensersoft.Clients.Predictions.Abstractions.Models;
 
 public record FitModelRequest
 {
-    public string Region { get; set; } = default!;
+    public int RegionKey { get; set; }
     public int ToYear { get; set; }
     public int ToMonth { get; set; }
-    public FitModelRequest(string region, int toYear, int toMonth)
+    public FitModelRequest(int regionKey, int toYear, int toMonth)
     {
-        Region = region;
+        RegionKey = regionKey;
         ToYear = toYear;
         ToMonth = toMonth;
     }

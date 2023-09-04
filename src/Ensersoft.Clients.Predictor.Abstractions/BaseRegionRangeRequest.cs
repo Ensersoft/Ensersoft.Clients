@@ -4,7 +4,7 @@ namespace Ensersoft.Clients.Predictor.Abstractions;
 
 public abstract record BaseRegionRangeRequest
 {
-    public int RegionKey { get; set; } = default!;
+    public int RegionKey { get; set; }
     public DateMonthOnly FromDate { get; set; } = default!;
     public DateMonthOnly ToDate { get; set; } = default!;
 

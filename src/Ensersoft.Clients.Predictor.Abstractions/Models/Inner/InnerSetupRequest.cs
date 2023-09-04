@@ -2,7 +2,7 @@ namespace Ensersoft.Clients.Predictor.Abstractions.Models.Inner;
 
 public record InnerSetupRequest
 {
-    public int RegionKey { get; set; } = default!;
+    public int RegionKey { get; set; }
     public int FromYear { get; set; }
     public int FromMonth { get; set; }
     public int ToYear { get; set; }

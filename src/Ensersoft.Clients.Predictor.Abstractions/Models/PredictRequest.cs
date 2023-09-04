@@ -4,7 +4,7 @@ namespace Ensersoft.Clients.Predictor.Abstractions.Models;
 
 public record PredictRequest : BaseRegionRangeRequest
 {
-    public PredictRequest(string region, DateMonthOnly fromDate, DateMonthOnly toDate) : base(region, fromDate, toDate)
+    public PredictRequest(int regionKey, DateMonthOnly fromDate, DateMonthOnly toDate) : base(regionKey, fromDate, toDate)
     {
     }
 }

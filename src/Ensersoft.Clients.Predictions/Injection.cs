@@ -27,6 +27,7 @@ public static class Injection
     {
         services.AddAndValidateOptions<PredictionsClientOptions>(configuration, "PredictionsService");
         services.AddScoped<IPredictionsModelClient, PredictionsModelClient>();
+        services.AddScoped<IPredictionsClient, PredictionsClient>();
         services.AddHttpClient(InternalApiClients.PredictionsClient)
             .ConfigureHttpClient((sp, c) =>
             {

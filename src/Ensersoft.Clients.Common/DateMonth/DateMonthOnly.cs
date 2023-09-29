@@ -41,6 +41,11 @@ public struct DateMonthOnly : IEquatable<DateMonthOnly>
         return Equals(Year, other.Year) && Equals(Month, other.Month);
     }
 
+    public readonly bool Equals(DateOnly other)
+    {
+        return Equals(Year, other.Year) && Equals(Month, other.Month);
+    }
+
     public override readonly bool Equals(object? obj)
     {
         var right = obj as DateMonthOnly?;

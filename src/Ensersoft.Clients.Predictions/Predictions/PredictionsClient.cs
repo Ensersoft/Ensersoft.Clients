@@ -15,7 +15,7 @@ public class PredictionsClient : PredictionsClientBase, IPredictionsClient
     public async Task<GetPredictionsResponse> GetPredictions(GetPredictionsRequest request,
         CancellationToken cancellationToken = default)
     {
-        var uri = new Uri($"{BaseAddress}get", UriKind.Relative);
+        var uri = new Uri($"{BaseAddress}query", UriKind.Relative);
         var response = await SendRequestAndValidate(() => HttpClient.PostAsJsonAsync(uri, request, cancellationToken));
         var result = await response.Content.ReadFromJsonAsync<GetPredictionsResponse>(cancellationToken: CancellationToken.None);
         return result!;

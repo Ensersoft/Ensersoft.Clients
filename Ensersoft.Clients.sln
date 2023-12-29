@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Predictio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Predictor.Abstractions", "src\Ensersoft.Clients.Predictor.Abstractions\Ensersoft.Clients.Predictor.Abstractions.csproj", "{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Scrappers.Abstractions", "src\Ensersoft.Clients.Scrappers.Abstractions\Ensersoft.Clients.Scrappers.Abstractions.csproj", "{59188C47-0C7B-4AEA-9C89-DBA010E25127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensersoft.Clients.Scrappers", "src\Ensersoft.Clients.Scrappers\Ensersoft.Clients.Scrappers.csproj", "{0D8E8BDC-A966-4098-A235-83885D90D9B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,14 @@ Global
 		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59188C47-0C7B-4AEA-9C89-DBA010E25127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59188C47-0C7B-4AEA-9C89-DBA010E25127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59188C47-0C7B-4AEA-9C89-DBA010E25127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59188C47-0C7B-4AEA-9C89-DBA010E25127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8E8BDC-A966-4098-A235-83885D90D9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8E8BDC-A966-4098-A235-83885D90D9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8E8BDC-A966-4098-A235-83885D90D9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8E8BDC-A966-4098-A235-83885D90D9B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +77,7 @@ Global
 		{2206C495-4989-4EAE-A175-5D50D4852712} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
 		{5B5FF5E5-FC2B-4827-91EF-E77AC28B17A0} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
 		{33B8EB4C-D65C-4E16-B55F-C606C3EBEC27} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{59188C47-0C7B-4AEA-9C89-DBA010E25127} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
+		{0D8E8BDC-A966-4098-A235-83885D90D9B3} = {D0C209CF-2DF1-4C98-B135-264FD5D2D59C}
 	EndGlobalSection
 EndGlobal

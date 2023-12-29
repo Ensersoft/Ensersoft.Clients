@@ -27,6 +27,7 @@ public static class Injection
     {
         services.AddAndValidateOptions<ScrappersClientOptions>(configuration, "ScrappersService");
         services.AddScoped<IFactHoursClient, FactHoursClient>();
+        services.AddScoped<IFactPriceClient, FactPriceClient>();
         services.AddHttpClient(InternalApiClients.ScrappersClient)
             .ConfigureHttpClient((sp, c) =>
             {

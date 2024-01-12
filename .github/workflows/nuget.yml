@@ -49,12 +49,6 @@ jobs:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
                   project: src/Ensersoft.Clients.Scrappers.Abstractions/Ensersoft.Clients.Scrappers.Abstractions.csproj
 
-            - name: Publish NuGet WebApi Abstractions
-              uses: ensersoft/action-nuget-publish@v1.0.2
-              with:
-                  nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.WebApi.Abstractions/Ensersoft.Clients.WebApi.Abstractions.csproj
-
             - name: Publish NuGet Predictor
               uses: ensersoft/action-nuget-publish@v1.0.2
               with:
@@ -78,9 +72,3 @@ jobs:
               with:
                   nuget-key: ${{ secrets.NUGET_API_KEY }}
                   project: src/Ensersoft.Clients.Scrappers/Ensersoft.Clients.Scrappers.csproj
-
-            - name: Publish NuGet WebApi
-              uses: ensersoft/action-nuget-publish@v1.0.2
-              with:
-                  nuget-key: ${{ secrets.NUGET_API_KEY }}
-                  project: src/Ensersoft.Clients.WebApi/Ensersoft.Clients.WebApi.csproj

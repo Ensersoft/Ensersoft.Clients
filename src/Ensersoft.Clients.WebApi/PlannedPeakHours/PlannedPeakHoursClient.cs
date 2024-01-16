@@ -1,6 +1,8 @@
+using System.Globalization;
 using System.Net.Http.Json;
 using Ensersoft.Clients.WebApi.Abstractions;
 using Ensersoft.Clients.WebApi.Abstractions.Models;
+using Microsoft.AspNetCore.Http.Extensions;
 
 namespace Ensersoft.Clients.WebApi.PlannedPeakHours;
 
@@ -15,8 +17,14 @@ public class PlannedPeakHoursClient : WebApiClientBase, IPlannedPeakHoursClient
     public async Task<GetPlannedPeakHoursResponse> GetPlannedPeakHours(GetPlannedPeakHoursRequest request,
         CancellationToken cancellationToken = default)
     {
-        var uri = new Uri($"{BaseAddress}query", UriKind.Relative);
-        var response = await SendRequestAndValidate(() => HttpClient.PostAsJsonAsync(uri, request, cancellationToken));
+        var query = new QueryBuilder
+        {
+            { "regionKey", request.RegionKey.ToString(CultureInfo.InvariantCulture)},
+            { "year", request.Year.ToString(CultureInfo.InvariantCulture)},
+            { "month", request.Month.ToString(CultureInfo.InvariantCulture) },
+        };
+        var uri = new Uri($"{BaseAddress}query{query}", UriKind.Relative);
+        var response = await SendRequestAndValidate(() => HttpClient.GetAsync(uri, cancellationToken));
         var result = await response.Content.ReadFromJsonAsync<GetPlannedPeakHoursResponse>(cancellationToken: CancellationToken.None);
         return result!;
     }

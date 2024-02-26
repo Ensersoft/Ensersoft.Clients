@@ -31,7 +31,7 @@ public static class Injection
             .ConfigureHttpClient((sp, c) =>
             {
                 var options = sp.GetRequiredService<PredictorClientOptions>();
-                c.DefaultRequestHeaders.TryAddWithoutValidation("ApiKey", options.ApiKey);
+                c.DefaultRequestHeaders.TryAddWithoutValidation(ApiKeyOptions.ApiKeyHeader, options.ApiKey);
                 c.BaseAddress = new Uri(options.Url);
                 c.Timeout = TimeSpan.FromSeconds(options.Timeout);
             })

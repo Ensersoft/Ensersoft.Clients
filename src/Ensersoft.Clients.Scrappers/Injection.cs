@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Sockets;
 using Ensersoft.Clients.Common;
 using Ensersoft.Clients.Common.Extensions;
+using Ensersoft.Clients.Common.Options;
 using Ensersoft.Clients.Common.Utilities.Http;
 using Ensersoft.Clients.Scrappers.Abstractions;
 using Ensersoft.Clients.Scrappers.FactData;
@@ -32,7 +33,7 @@ public static class Injection
             .ConfigureHttpClient((sp, c) =>
             {
                 var options = sp.GetRequiredService<ScrappersClientOptions>();
-                c.DefaultRequestHeaders.TryAddWithoutValidation("ApiKey", options.ApiKey);
+                c.DefaultRequestHeaders.TryAddWithoutValidation(ApiKeyOptions.ApiKeyHeader, options.ApiKey);
                 c.BaseAddress = new Uri(options.Url);
             })
             .AddPolicyHandler((sp, request) => AddRetryPolicy(sp, request, DefaultAllowRetryFilters))

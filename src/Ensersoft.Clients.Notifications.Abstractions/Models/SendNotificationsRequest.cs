@@ -4,12 +4,12 @@ public record SendNotificationsRequest
 {
     public string NotificationEvent { get; }
     public object Data { get; }
-    public UserData ContactData { get; }
+    public UserData UserData { get; }
 
-    public SendNotificationsRequest(string notificationEvent, object data, UserData contactData)
+    public SendNotificationsRequest(string notificationEvent, object data, UserData userData)
     {
         NotificationEvent = notificationEvent;
         Data = data;
-        ContactData = contactData;
+        UserData = userData;
     }
 }

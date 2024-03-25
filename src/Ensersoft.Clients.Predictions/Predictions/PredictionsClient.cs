@@ -17,7 +17,15 @@ public class PredictionsClient : PredictionsClientBase, IPredictionsClient
     {
         var uri = new Uri($"{BaseAddress}query", UriKind.Relative);
         var response = await SendRequestAndValidate(() => HttpClient.PostAsJsonAsync(uri, request, cancellationToken));
-        var result = await response.Content.ReadFromJsonAsync<GetPredictionsResponse>(cancellationToken: CancellationToken.None);
+        var result = await response.Content.ReadFromJsonAsync<GetPredictionsResponse>(cancellationToken: cancellationToken);
+        return result!;
+    }
+
+    public async Task<GetPredictionRangesResponse> GetPredictionRanges(GetPredictionRangesRequest request, CancellationToken cancellationToken = default)
+    {
+        var uri = new Uri($"{BaseAddress}ranges", UriKind.Relative);
+        var response = await SendRequestAndValidate(() => HttpClient.PostAsJsonAsync(uri, request, cancellationToken));
+        var result = await response.Content.ReadFromJsonAsync<GetPredictionRangesResponse>(cancellationToken: cancellationToken);
         return result!;
     }
 }

@@ -28,4 +28,12 @@ public class FactHoursClient : ScrappersClientBase, IFactHoursClient
         var result = await response.Content.ReadFromJsonAsync<GetFactHoursResponse>(cancellationToken: CancellationToken.None);
         return result!;
     }
+
+    public async Task<GetFactHoursRangesResponse> GetFactHoursRanges(GetFactHoursRangesRequest request, CancellationToken cancellationToken = default)
+    {
+        var uri = new Uri($"{BaseAddress}ranges", UriKind.Relative);
+        var response = await SendRequestAndValidate(() => HttpClient.PostAsJsonAsync(uri, request, cancellationToken));
+        var result = await response.Content.ReadFromJsonAsync<GetFactHoursRangesResponse>(cancellationToken: cancellationToken);
+        return result!;
+    }
 }

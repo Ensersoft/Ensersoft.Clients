@@ -6,4 +6,7 @@ public interface IFactHoursClient
 {
     Task<GetFactHoursResponse> GetFactHours(GetFactHoursRequest request,
         CancellationToken cancellationToken = default);
+
+    Task<GetFactHoursRangesResponse> GetFactHoursRanges(GetFactHoursRangesRequest request,
+        CancellationToken cancellationToken = default);
 }

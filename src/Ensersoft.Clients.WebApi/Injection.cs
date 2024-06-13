@@ -7,6 +7,7 @@ using Ensersoft.Clients.Common.Utilities.Http;
 using Ensersoft.Clients.WebApi.Abstractions;
 using Ensersoft.Clients.WebApi.Options;
 using Ensersoft.Clients.WebApi.PlannedPeakHours;
+using Ensersoft.Clients.WebApi.PredictorRegions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -28,6 +29,7 @@ public static class Injection
     {
         services.AddAndValidateOptions<WebApiClientOptions>(configuration, "WebApiService");
         services.AddScoped<IPlannedPeakHoursClient, PlannedPeakHoursClient>();
+        services.AddScoped<IPredictorRegionsClient, PredictorRegionsClient>();
         services.AddHttpClient(InternalApiClients.WebApiClient)
             .ConfigureHttpClient((sp, c) =>
             {
